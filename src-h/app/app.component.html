@@ -1,0 +1,24 @@
+<h3>Printing All Numbers</h3>
+<ul [hidden]="evenClick">
+  <li *ngFor="let n of numbers">
+   {{n}}
+   
+  </li>
+</ul>
+<ul [hidden]="!evenClick">
+  <li *ngFor="let n of numbers">
+   <span *ngIf="n%2==0">{{n}}</span> 
+   
+  </li>
+</ul>
+<ul [hidden]="!oddClick">
+  <li *ngFor="let n of numbers">
+   <span *ngIf="n%2!=0">{{n}}</span> 
+   
+  </li>
+</ul>
+
+<button (click) ="getEven()">Print Even</button>
+<button (click) ="getOdd()">Print Odd</button>
+
+
